@@ -1,0 +1,143 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title layout - waldteufel@ukr.net
+    link(rel='icon', href='img/wehrwolf.jpg')
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='css/libs.min.css')
+    // js-libs (font awesome, slick, wow ...)
+    script(defer='', src='js/libs.min.js')
+    // own stylesheet and js
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/js.js', defer='')
+  body
+    // HEADER
+    .header-wrapper
+      header.header
+        // NAVIGATION
+        nav.navigation
+          a.company-logo © New Trade Company
+          ul.nav-ul-1
+            li: span#nav-datetimer
+            li
+              a(href='#')
+                img(src='img/calender.png', alt='img/calender.png', style='height: 36px')
+            li
+              a(href='#')
+                img(src='img/messageBell.png', alt='img/messageBell.png')
+          ul.nav-ul-2
+            li: a(href='#') Sign up
+            li: a(href='#') Sign in
+            li
+              a(href='#')
+                img(src='img/ru.png', alt='img/ru.png', style='height: 28px')
+            li
+              a(href='#')
+                img(src='img/en.png', alt='img/en.png', style='height: 28px')
+        // /NAVIGATION
+    // /HEADER
+    // MAIN SECTION
+    main.main
+      // ASIDE MENU
+      aside.aside
+        ul.aside-list.accordion
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.fas.fa-home
+              | Home
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.fas.fa-users
+              | Сustomers
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.fas.fa-briefcase
+              | Employees
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.fas.fa-bookmark
+              | Tickets
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.far.fa-bookmark
+              | Transactions
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.far.fa-flag
+              | Company
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.fas.fa-link
+              | Communications
+              span.submenu-indicator
+                i.fas.fa-plus
+            ul.submenu
+              li.aside-submenu-list-li: a(href='#') Новое уведомление
+              li.aside-submenu-list-li: a(href='#') История уведомлений
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.far.fa-copy
+              | Orders
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.fas.fa-chart-line
+              | Analytics
+              span.submenu-indicator
+                i.fas.fa-plus
+            ul.submenu
+              li.aside-submenu-list-li: a(href='#') Analytics1
+              li.aside-submenu-list-li: a(href='#') Analytics2
+              li.aside-submenu-list-li: a(href='#') Analytics3
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.far.fa-file-alt
+              | Logs
+              span.submenu-indicator
+                i.fas.fa-plus
+            ul.submenu
+              li.aside-submenu-list-li: a(href='#') Logs1
+              li.aside-submenu-list-li: a(href='#') Logs2
+              li.aside-submenu-list-li: a(href='#') Logs3
+          li.aside-list-li
+            a.aside-link(href='#')
+              i.fas.fa-cogs
+              | Settings
+              span.submenu-indicator
+                i.fas.fa-plus
+            ul.submenu
+              li.aside-submenu-list-li: a(href='#') SettingsТестовая таблица
+              li.aside-submenu-list-li: a(href='#') Settings2
+              li.aside-submenu-list-li
+                a(href='#')
+                  | Admin
+                  span.submenu-indicator
+                    i.fas.fa-plus
+                ul.submenu
+                  li: a(href='#') Регистрация сотрудника
+                  li: a(href='#') Смена пароля сотруднику
+                  li: a(href='#') Admin3
+                  li: a(href='#') Admin4
+      // /ASIDE MENU
+      // WORK AREA
+      .work-area
+        | WORK AREA
+        br
+        br
+        p(style='font-family:rb; text-align: justify;')
+          | RobotoBold
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.
+        br
+        p(style='font-family:rcl; text-align: justify;')
+          | RobotoCondensedLight
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sed, neque, aliquam dolores, molestiae, soluta rem esse aspernatur sapiente illum cum ea hic! Officiis nulla non officia repellat dolorum unde ab est harum earum recusandae provident aut esse omnis porro labore ipsa amet neque, quidem, possimus, inventore ratione maxime cum.
+        br
+      // /WORK AREA
+    // /MAIN SECTION
+    // FOOTER
+    .footer-wrapper
+      footer.footer
+    // /FOOTER
