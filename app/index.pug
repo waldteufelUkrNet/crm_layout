@@ -44,83 +44,83 @@ html(lang='en')
       // ASIDE MENU
       aside.aside
         .accordion-wrapper
-          ul.aside-list.accordion
-            li.aside-list-li
-              a.aside-link(href='#')
+          ul.accordion
+            li
+              a(href='#')
                 i.fas.fa-home
                 | Home
-            li.aside-list-li
-              a.aside-link(href='#')
+            li
+              a(href='#')
                 i.fas.fa-users
                 | Сustomers
-            li.aside-list-li
-              a.aside-link(href='#')
-                i.fas.fa-briefcase
-                | Employees
-            li.aside-list-li
-              a.aside-link(href='#')
+            li
+              a(href='#')
                 i.fas.fa-bookmark
                 | Tickets
-            li.aside-list-li
-              a.aside-link(href='#')
+            li
+              a(href='#')
                 i.far.fa-bookmark
                 | Transactions
-            li.aside-list-li
-              a.aside-link(href='#')
-                i.far.fa-flag
-                | Company
-            li.aside-list-li
-              a.aside-link(href='#')
+            li
+              a.toggle(href='javascript:void(0);')
                 i.fas.fa-link
                 | Communications
                 span.submenu-indicator
                   i.fas.fa-plus
-              ul.submenu
-                li.aside-submenu-list-li: a(href='#') Новое уведомление
-                li.aside-submenu-list-li: a(href='#') История уведомлений
-            li.aside-list-li
-              a.aside-link(href='#')
+              ul.inner
+                li: a(href='#') Новое уведомление
+                li: a(href='#') История уведомлений
+            li
+              a(href='#')
                 i.far.fa-copy
                 | Orders
-            li.aside-list-li
-              a.aside-link(href='#')
+            li
+              a.toggle(href='javascript:void(0);')
                 i.fas.fa-chart-line
                 | Analytics
                 span.submenu-indicator
                   i.fas.fa-plus
-              ul.submenu
-                li.aside-submenu-list-li: a(href='#') Analytics1
-                li.aside-submenu-list-li: a(href='#') Analytics2
-                li.aside-submenu-list-li: a(href='#') Analytics3
-            li.aside-list-li
-              a.aside-link(href='#')
+              ul.inner
+                li: a(href='#') Analytics1
+                li: a(href='#') Analytics2
+                li: a(href='#') Analytics3
+            li
+              a.toggle(href='javascript:void(0);')
                 i.far.fa-file-alt
                 | Logs
                 span.submenu-indicator
                   i.fas.fa-plus
-              ul.submenu
-                li.aside-submenu-list-li: a(href='#') Logs1
-                li.aside-submenu-list-li: a(href='#') Logs2
-                li.aside-submenu-list-li: a(href='#') Logs3
-            li.aside-list-li
-              a.aside-link(href='#')
+              ul.inner
+                li: a(href='#') Logs1
+                li: a(href='#') Logs2
+                li: a(href='#') Logs3
+            li
+              a.toggle(href='javascript:void(0);')
                 i.fas.fa-cogs
                 | Settings
                 span.submenu-indicator
                   i.fas.fa-plus
-              ul.submenu
-                li.aside-submenu-list-li: a(href='#') SettingsТестовая таблица
-                li.aside-submenu-list-li: a(href='#') Settings2
-                li.aside-submenu-list-li
-                  a(href='#')
+              ul.inner
+                li: a(href='#') SettingsТестовая таблица
+                li: a(href='#') Settings2
+                li
+                  a.toggle(href='javascript:void(0);')
                     | Admin
                     span.submenu-indicator
                       i.fas.fa-plus
-                  ul.submenu
+                  ul.inner
                     li: a(href='#') Регистрация сотрудника
                     li: a(href='#') Смена пароля сотруднику
                     li: a(href='#') Admin3
                     li: a(href='#') Admin4
+                    li
+                      a(href='#')
+                        i.fas.fa-briefcase
+                        | Employees
+                    li
+                      a(href='#')
+                        i.far.fa-flag
+                        | Company
       // /ASIDE MENU
 
       // WORK AREA

@@ -1,13 +1,13 @@
 @media only screen and (min-width: 768px) {
 
 	body {
-		font-family              : arial;
+		font-family                : arial;
 	}
 
 	/* ↓↓↓ HEADER ↓↓↓ */
   .header {
   	max-width                : 1920px;
-  	width                    : 100%;
+  	width                    : calc( 100% + 1px );
   	height                   : 50px;
   	background-color         : #1D160B;
     position                 : fixed;
@@ -66,71 +66,83 @@
 
 	/* ↓↓↓ MAIN PART ↓↓↓ */
 	.main {
-		max-width                : 1920px;
-  	width                    : 100%;
-  	margin                   : 50px 0 0;
+		max-width                  : 1920px;
+  	width                      : 100%;
+  	margin                     : 50px auto 0;
+    position                   : relative;
 
 		/* ↓↓↓ ASIDE MENU ↓↓↓ */
     .aside {
-      height                 : calc( 100vh - 50px);
-      width                  : 250px;
-      background-color       : #353535;
-      font-family            : rcl;
-      position               : fixed;
-      top                    : 50px;
-      left                   : 0px;
-      overflow               : hidden;
+      min-height               : calc( 100vh - 50px);
+      height                   : 100%;
+      width                    : 250px;
+      background-color         : #353535;
+      font-family              : rcl;
+      position                 : fixed;
+      top                      : 50px;
+      left                     : 0px;
+      overflow                 : hidden;
       .accordion-wrapper {
-        width                : calc( 100% + 18px );
-        height               : 100%;
-        overflow-y           : scroll;
-      }
-      .accordion {
-        a {
-          display            : inline-block;
-          width              : 100%;
-          height             : 40px;
-          line-height        : 40px;
-          background-color   : #353535;
-          color              : white;
-          font-family        : rcl;
-          font-size          : 16px;
-          position           : relative;
-          border-bottom      : 1px solid black;
-          padding-left       : 50px;
-          &:hover {
-            background-color : black;
-          }
-          svg {
-            display          : inline-block;
-            position         : absolute;
-            left             : 10px; top: 50%;
-            transform        : translate(0, -50%);
-            width            : 30px;
-            color            : orange;
-          }
-          span {//border: 1px dotted red;
-            display          : block;
-            width            : 20px;
-            height           : 20px;
-            padding-top      : 0px;
-            position         : absolute; z-index: 1;
-            right            : 10px;
-            top              : 10px;
-            svg {
-              color          : white;
-              font-size      : 18px;
-              padding        : 0;
-              position       : absolute;
-              top            : 10px;
-              left           : -6px;
-
+        width                  : calc( 100% + 18px );
+        height                 : 100%;
+        overflow-y             : scroll;
+        ul .inner {
+          //padding-left: 1em;
+          overflow             : hidden;
+          display              : none;
+        }
+        ul.accordion > li a {
+          padding-left: 10px;
+        }
+        ul.accordion > li li a {
+          padding-left: 40px;
+        }
+        ul.accordion > li li li a {
+          padding-left: 70px;
+        }
+        ul li {
+          a {
+            display            : block;
+            width              : 100%;
+            height             : 40px;
+            line-height        : 40px;
+            background-color   : #353535;
+            color              : white;
+            font-family        : rcl;
+            font-size          : 16px;
+            position           : relative;
+            border-bottom      : 1px solid black;
+            padding-left       : 40px;
+            &:hover {
+              background-color : black;
+            }
+            & > svg {
+              display          : inline-block;
+              //position         : absolute;
+              //left             : 10px;
+              //top: 50%;
+             // transform        : translate(0, -50%);
+              width            : 30px;
+              color            : orange;
+            }
+            span {//border: 1px dotted red;
+              display          : block;
+              width            : 20px;
+              height           : 20px;
+              padding-top      : 0px;
+              position         : absolute; z-index: 1;
+              right            : 10px;
+              top              : 10px;
+              svg {
+                color          : white;
+                font-size      : 18px;
+                padding        : 0;
+                position       : absolute;
+                // top            : 10px;
+                // left           : -6px;
+              }
             }
           }
-        }
-        & ul {
-          height            : 0px;
-          overflow          : hidden;
         }
       }
     }
@@ -138,10 +150,10 @@
 
 		/* ↓↓↓ WORK AREA ↓↓↓ */
     .work-area {
-      background-color      : lightgrey;
-      padding               : 15px;
-      margin-left           : 250px;
-      min-height            : calc( 100vh - 50px);
+      background-color         : lightgrey;
+      padding                  : 15px;
+      margin-left              : 250px;
+      min-height               : calc( 100vh - 50px);
     }
 		/* ↑↑↑ /WORK AREA ↑↑↑ */
 	}
