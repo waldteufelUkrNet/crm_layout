@@ -34,19 +34,59 @@ $(document).ready(function(){
 
     var $this = $(this);
 
+    //close
     if ($this.next().hasClass('show')) {
       $this.next().removeClass('show');
       $this.next().slideUp(350);
-        //$('.toggle').children('span').children('i').css({'color':'red'});
-        alert(1);
+
+        $this.children('span').children('svg').removeClass('fa-minus').addClass('fa-plus');
+
+    //open
     } else {
       $this.parent().parent().find('li .inner').removeClass('show');
       $this.parent().parent().find('li .inner').slideUp(350);
       $this.next().toggleClass('show');
       $this.next().slideToggle(350);
+
+        $('.toggle').children('span').children('svg').removeClass('fa-minus').addClass('fa-plus');
+        $this.children('span').children('svg').removeClass('fa-plus').addClass('fa-minus');
+
+        if ($this.parent().parent().siblings('.toggle').length != 0) {
+          $this.parent().parent().siblings('.toggle').children('span').children('svg').removeClass('fa-plus').addClass('fa-minus');
+        }
     }
   });
+
+  $('.accordion a').click(function(e) {
+
+    if ( $(this).parent().siblings('li').children('a').hasClass('toggle') ) {
+      $(this).parent().siblings('li').children('.toggle').siblings('.inner').removeClass('show');
+      $(this).parent().siblings('li').children('.toggle').siblings('.inner').slideUp(350);
+      $(this).parent().siblings('li').children('.toggle').children('span').children('svg').removeClass('fa-minus').addClass('fa-plus');
+    }
+
+    $('.accordion a').css({'background-color':'#353535'});
+    $(this).css({'background-color':'black'});
+
+
+
+    // $('.accordion a').mouseenter(function(){
+    //   if ( $(this).css('background-color') == 'rgb(0, 0, 0)' ) { console.log(1);
+    //   } else {
+    //     $(this).mouseleave(function(){
+    //       //$(this).css({'background-color':'#353535'})
+    //     });
+    //   }
+    // });
+
+  });
+
+    // $('.accordion a').mouseleave(function(){
+    //   if (  $(this) == THIS ) {
+    //     $(this).css({'background-color':'black'});
+    //   };
+    //   $(this).css({'background-color':'#353535'});
+    // });
   /* ↑↑↑ /accordion ↑↑↑ */
 
 });
-
