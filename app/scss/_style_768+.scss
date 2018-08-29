@@ -73,8 +73,7 @@
 
 		/* ↓↓↓ ASIDE MENU ↓↓↓ */
     .aside {
-      min-height               : calc( 100vh - 50px);
-      height                   : 100%;
+      height                   : calc( 100vh - 50px);
       width                    : 250px;
       background-color         : #353535;
       font-family              : rcl;
@@ -91,13 +90,14 @@
           display              : none;
         }
         ul.accordion > li a {
-          padding-left: 10px;
+          padding-left         : 10px;
+          outline              : none;
         }
         ul.accordion > li li a {
-          padding-left: 40px;
+          padding-left         : 40px;
         }
         ul.accordion > li li li a {
-          padding-left: 70px;
+          padding-left         : 70px;
         }
         ul li {
           a {
@@ -112,9 +112,9 @@
             position           : relative;
             border-bottom      : 1px solid black;
             padding-left       : 40px;
-            &:hover {
-              background-color : black;
-            }
+            // &:hover {
+            //   background-color : black;
+            // }
             & > svg {
               display          : inline-block;
               width            : 30px;

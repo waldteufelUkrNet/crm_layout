@@ -58,6 +58,7 @@ $(document).ready(function(){
   });
 
   $('.accordion a').click(function(e) {
+    var arrOfListItems = $('.accordion a');
 
     if ( $(this).parent().siblings('li').children('a').hasClass('toggle') ) {
       $(this).parent().siblings('li').children('.toggle').siblings('.inner').removeClass('show');
@@ -66,27 +67,24 @@ $(document).ready(function(){
     }
 
     $('.accordion a').css({'background-color':'#353535'});
+    for (var i = 0; i < arrOfListItems.length; i++) {
+      arrOfListItems[i].bgc = '#353535';
+    }
+
     $(this).css({'background-color':'black'});
-
-
-
-    // $('.accordion a').mouseenter(function(){
-    //   if ( $(this).css('background-color') == 'rgb(0, 0, 0)' ) { console.log(1);
-    //   } else {
-    //     $(this).mouseleave(function(){
-    //       //$(this).css({'background-color':'#353535'})
-    //     });
-    //   }
-    // });
-
+    this.bgc = 'black';
   });
 
-    // $('.accordion a').mouseleave(function(){
-    //   if (  $(this) == THIS ) {
-    //     $(this).css({'background-color':'black'});
-    //   };
-    //   $(this).css({'background-color':'#353535'});
-    // });
+  $('.accordion a').mouseenter(function(){
+    if (this.bgc == 'black') { return };
+    $(this).css({'transition':'background-color .2s','background-color':'black'});
+  });
+
+  $('.accordion a').mouseleave(function(){
+    if (this.bgc == 'black') { return };
+    $(this).css({'transition':'background-color .2s','background-color':'#353535'});
+  });
+
   /* ↑↑↑ /accordion ↑↑↑ */
 
 });
