@@ -84,7 +84,16 @@ $(document).ready(function(){
     if (this.bgc == 'black') { return };
     $(this).css({'transition':'background-color .2s','background-color':'#353535'});
   });
-
   /* ↑↑↑ /accordion ↑↑↑ */
 
 });
+document.onwheel = function() {
+
+  var main  = document.getElementsByTagName('main')[0];
+  var aside = document.getElementsByTagName('aside')[0];
+
+  var mainLeft = main.offsetLeft + 'px';
+  console.log("mainLeft", mainLeft);
+
+  aside.style.left = mainLeft;
+};

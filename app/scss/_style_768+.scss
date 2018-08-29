@@ -73,7 +73,7 @@
 
 		/* ↓↓↓ ASIDE MENU ↓↓↓ */
     .aside {
-      height                   : calc( 100vh - 50px);
+      height                   : calc( 100vh - 50px );
       width                    : 250px;
       background-color         : #353535;
       font-family              : rcl;
@@ -112,9 +112,6 @@
             position           : relative;
             border-bottom      : 1px solid black;
             padding-left       : 40px;
-            // &:hover {
-            //   background-color : black;
-            // }
             & > svg {
               display          : inline-block;
               width            : 30px;
@@ -127,7 +124,7 @@
               padding-top      : 0px;
               position         : absolute;
               z-index          : 1;
-              right            : 10px;
+              left             : 220px;
               top              : 10px;
               svg {
                 color          : white;
@@ -147,7 +144,7 @@
       background-color         : lightgrey;
       padding                  : 15px;
       margin-left              : 250px;
-      min-height               : calc( 100vh - 50px);
+      min-height               : calc( 100vh - 50px );
     }
 		/* ↑↑↑ /WORK AREA ↑↑↑ */
 	}
